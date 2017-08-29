@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <FrameLayout
+        android:id="@+id/frame_layout_avatar_bg"
+        android:layout_width="95dp"
+        android:layout_height="95dp"
+        android:layout_centerHorizontal="true">
+
+        <ImageView
+            android:id="@+id/img_avatar_bg"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="gone"
+            android:background="@drawable/border_ring_shape"/>
+
+        <net.duohuo.dhroid.view.megwidget.CircleImageView
+            android:id="@+id/img_player_avatar"
+            android:layout_width="91dp"
+            android:layout_height="91dp"
+            android:layout_margin="2dp"
+            android:src="@drawable/default_avatar"
+            android:layout_centerHorizontal="true"/>
+    </FrameLayout>
+
+
+    <TextView
+        android:id="@+id/txt_player_youke_nickname"
+        android:layout_width="wrap_content"
+        android:layout_height="35dp"
+        android:layout_marginTop="30dp"
+        android:gravity="center"
+        android:layout_centerHorizontal="true"
+        android:text="免子"
+        android:textColor="@color/btn_gray_bg"
+        android:textSize="16sp"
+        android:visibility="gone"/>
+    <TextView
+        android:id="@+id/txt_player_is_ready"
+        android:layout_above="@+id/txt_player_nickname"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:background="@drawable/waite_shape"
+        android:layout_centerHorizontal="true"
+        android:text="准备"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:paddingTop="2dp"
+        android:paddingBottom="2dp"
+        android:textColor="@color/white"
+        android:textSize="12sp"/>
+    <TextView
+        android:id="@+id/txt_roomer_count_down"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:background="@drawable/score_ring_shape"
+        android:layout_alignRight="@+id/frame_layout_avatar_bg"
+        android:layout_alignTop="@+id/frame_layout_avatar_bg"
+        android:layout_marginTop="2dp"
+        android:layout_marginLeft="5dp"
+        android:gravity="center"
+        android:textColor="@color/white"
+        android:text="0"
+        android:visibility="gone"
+        android:textSize="12sp"/>
+
+    <TextView
+        android:id="@+id/txt_player_nickname"
+        android:layout_below="@+id/frame_layout_avatar_bg"
+        android:layout_width="wrap_content"
+        android:layout_height="25dp"
+        android:gravity="center"
+        android:layout_centerHorizontal="true"
+        android:text="免子"
+        android:textColor="@color/white"
+        android:textSize="14sp"/>
+</RelativeLayout>

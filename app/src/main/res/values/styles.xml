@@ -1,0 +1,50 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+    <style name="like_toast_dialog_style">
+        <item name="android:windowFrame">@null</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:backgroundDimEnabled">false</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:windowBackground">@drawable/round_background</item>
+    </style>
+
+    <style name="Theme.AppStartLoadTranslucent" parent="android:Theme">
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowNoTitle">true</item>
+    </style>
+
+    <style name="inputDialog" parent="@android:style/Theme.Holo.Light.Dialog">
+        <item name="android:windowFrame">@color/transparent</item><!-- 边框 -->
+        <item name="android:windowIsFloating">true</item><!-- 是否浮现在activity之上 -->
+        <item name="android:windowIsTranslucent">false</item><!-- 半透明 -->
+        <item name="android:windowNoTitle">true</item><!-- 无标题 -->
+        <item name="android:windowBackground">@color/transparent</item><!-- 自己想要的背景 -->
+        <item name="android:backgroundDimEnabled">true</item><!-- 模糊 -->
+        <item name="android:windowSoftInputMode">stateAlwaysVisible</item><!--显示软件盘-->
+    </style>
+
+
+    <style name="BasicSingleItemStyle" >
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">48dp</item>
+        <item name="android:paddingLeft">15dp</item>
+        <item name="android:paddingRight">15dp</item>
+        <item name="android:background">@color/white</item>
+        <item name="item_subTitleColor">@color/text_color_gray</item>
+        <item name="item_subTitleSize">15sp</item>
+        <item name="item_titleColor">@color/text_color_black</item>
+        <item name="item_titleSize">15sp</item>
+        <item name="item_countColor">@color/red</item>
+        <item name="item_countSize">15sp</item>
+    </style>
+
+</resources>
