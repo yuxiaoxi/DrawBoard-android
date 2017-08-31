@@ -43,11 +43,7 @@
         <activity
             android:name="com.zhy.graph.activity.HomeActivity"
             android:theme="@style/Theme.AppStartLoadTranslucent" >
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity>
 
         <activity
@@ -62,9 +58,12 @@
         <activity
             android:name="com.zhy.graph.activity.PlayerRoomActivity"
             android:theme="@style/Theme.AppStartLoadTranslucent"
-            android:configChanges="orientation|keyboardHidden"
-            android:exported="true"
             >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
 
         </activity>
 
