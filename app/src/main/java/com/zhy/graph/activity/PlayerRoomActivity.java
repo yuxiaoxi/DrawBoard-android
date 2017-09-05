@@ -3,6 +3,7 @@ package com.zhy.graph.activity;
 import android.annotation.SuppressLint;
 import android.graphics.Color;
 import android.os.Bundle;
+import android.os.Handler;
 import android.os.Message;
 import android.util.Log;
 import android.view.Gravity;
@@ -17,6 +18,7 @@ import android.widget.Toast;
 import android.widget.ViewSwitcher;
 
 import com.zhy.graph.R;
+import com.zhy.graph.network.HomeNetHelper;
 import com.zhy.graph.utils.Utils;
 import com.zhy.graph.widget.HuaBanView;
 import com.zhy.graph.widget.PopDialog;
@@ -61,6 +63,15 @@ public class PlayerRoomActivity extends BaseAct{
 
     private LinearLayout linear_save_image;
 
+    private HomeNetHelper netHelper;
+
+    private Handler mHandler = new Handler() {
+        @Override
+        public void handleMessage(Message msg) {
+            super.handleMessage(msg);
+        }
+    };
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -76,8 +87,10 @@ public class PlayerRoomActivity extends BaseAct{
     }
 
     public void initView() {
+        netHelper = new HomeNetHelper(this,mHandler);
         hbView = (HuaBanView) findViewById(R.id.huaBanView1);
         initToDrawer();
+        netHelper.getRandomRoomUsingGET(1);
     }
 
     /**

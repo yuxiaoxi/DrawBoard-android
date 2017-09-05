@@ -1,5 +1,6 @@
 package net.duohuo.dhroid.net;
 
+import org.apache.commons.codec.binary.Base64;
 import org.apache.http.Header;
 import org.apache.http.HttpEntity;
 import org.apache.http.HttpResponse;
@@ -72,6 +73,10 @@ public class NetUtil {
 			UrlEncodedFormEntity entity = new UrlEncodedFormEntity(formparams,
 					"UTF-8");
 			httppost.setEntity(entity);
+			String authString = "yuzhuo" + ":" + "python";
+			byte[] authEncBytes = Base64.encodeBase64(authString.getBytes());
+			String authStringEnc = new String(authEncBytes);
+			httppost.addHeader("Authorization","Basic " + authStringEnc);
 			response =HttpManager.execute(httppost);
 			Header[] headers=response.getHeaders("Set-Cookie");
 			System.out.println(headers);
@@ -85,6 +90,10 @@ public class NetUtil {
 			}
 			url=url + encodeUrl(params);
 			HttpGet httpGet = new HttpGet(url);
+			String authString = "yuzhuo" + ":" + "python";
+			byte[] authEncBytes = Base64.encodeBase64(authString.getBytes());
+			String authStringEnc = new String(authEncBytes);
+			httpGet.addHeader("Authorization","Basic " + authStringEnc);
 			response = HttpManager.execute(httpGet);
 		}
 		HttpEntity rentity = response.getEntity();
